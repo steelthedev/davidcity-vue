@@ -1,0 +1,601 @@
+<template>
+
+    <Navbar />
+
+  <router-view/>
+
+  <Footer />
+</template>
+
+<script>
+
+import Navbar from '@/components/Navbar.vue'
+
+
+import Footer from '@/components/Footer.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    Navbar, Footer
+  }
+}
+
+
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  padding: 0;
+
+
+
+}
+:root{
+    --main-color:#0A203B;
+    --secondary-color:#FFF200;
+}
+
+
+body{
+    color: #000;
+}
+
+.nav-bar{
+    background:var(--main-color);
+
+}
+
+ .nav-bar .brand{
+    text-decoration: none;
+    color:var(--secondary-color);
+    font-size: 2rem;
+}
+
+.nav-bar .brand:hover{
+    color: #111;
+}
+
+.nav-bar ul li a{
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin: 7px;
+}
+
+
+
+.nav-bar button .fa-bars{
+    font-size:1.5rem;
+    color:var(--secondary-color);
+    font-weight:500;
+
+}
+
+.nav-bar .dropdown-menu{
+    background:var(--main-color);
+    transition:.5s;
+}
+
+/*hero*/
+
+.hero{
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:scroll;
+    background-position: center center;
+    position: relative;
+}
+
+.hero .row{
+    min-height: 800px;
+    height: 100vh;
+
+}
+
+
+.hero .row h2{
+    font-size: 3.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.hero .row p{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+
+.overlay-hero{
+    background: #1060FF;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+}
+
+.hero .row .g-btn , .c-btn{
+    padding: 20px;
+    color: #fff;
+    background:var(--main-color);
+    border:3px solid transparent;
+    border-radius: 0px;
+    font-size: 1.3rem;
+    margin: 10px;
+    transition: .5s;
+
+}
+
+.hero .row .g-btn:hover{
+    background: transparent;
+    border: 1px solid #111;
+}
+
+
+.hero .row .c-btn{
+    background: transparent;
+    border: 1px solid #111;
+    color: #fff;
+}
+
+.hero .row .c-btn:hover{
+    background: var(--main-color);
+}
+
+
+@media screen and (max-width:600px) {
+    .hero{
+        background:var(--main-color);
+        background-size: cover;
+    }
+}
+
+/* about */
+
+.about{
+    padding: 60px 0;
+    background: #fff;
+
+}
+
+.about img{
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: .5s;
+    width: 100%;
+}
+
+.about img:hover{
+    transform: scale(1.03);
+}
+
+.about h2 , .services h2 , .book-display h2 , .contact h2 , .book h2 , .about-author h2 , .blog-page h2 , .login h1 , .a-blog h2 , .tutorial h2{
+    padding: 10px;
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.about .about-words p{
+    color: #111;
+    font-size: 1.5rem;
+}
+
+/*services*/
+
+.services{
+    padding: 60px 0;
+    position: relative;
+}
+
+
+.services .s-single{
+    padding: 20px;
+    border: 3px solid transparent;
+    background: #f2f2f2;
+    height: 100%;
+}
+
+.services .s-single .s-fa{
+    font-size: 3.5rem;
+    color: var(--main-color);
+
+}
+
+.services .s-single .s-words {
+    padding: 7px;
+
+}
+
+.services .s-single .s-words p{
+    font-size: 1.2rem;
+    color: #111;
+}
+
+.s-btn{
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: .5s;
+
+
+}
+
+.s-btn:hover{
+
+    color: var(--main-color);
+}
+
+.services .s-line{
+    width:100px;
+    height: 3px;
+    position: absolute;
+    background: var(--main-color);
+}
+
+
+@media screen and (max-width:480px) {
+    .services .s-c{
+      margin-top:100px !important;
+    }
+}
+
+
+@media screen and (max-width:780px) {
+    .services .s-c{
+      margin-top:10px;
+    }
+}
+
+/*display*/
+
+
+.book-display{
+    padding: 60px 0;
+    background: var(--main-color);
+}
+
+.book-display h2{
+    color: #fff;
+}
+
+.book-display p{
+    padding: 7px;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.b-btn{
+    color: #fff;
+
+    padding: 20px;
+}
+
+.blog{
+    padding: 60px 0;
+}
+
+.blog .blog-single{
+    padding: 10px;
+    box-shadow:0px 7px 29px 0px rgba(116, 116, 116, 0.2) ;
+    margin-top:100px;
+}
+
+.blog .blog-single .b-title{
+    padding: 10px;
+   font-weight: bolder;
+   font-size: 1.8rem;
+   color: #111;
+}
+
+.blog .blog-single .date{
+    padding: 7px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.blog .blog-single .words{
+    padding: 2px;
+}
+
+.blog .blog-single .words p{
+    font-size: 1.2rem;
+    color: #111;
+
+}
+
+.blog .blog-single img{
+    transition: .5s;
+    height: 400px;
+
+}
+
+
+.blog .blog-single img:hover{
+    transform: scale(1.03);
+}
+
+
+
+
+.pull-right{
+    color: #111;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+.pull-right:hover{
+    color: #111;
+    text-decoration: none;
+}
+
+.bl-btn{
+    padding: 10px;
+    color: #fff;
+    background: var(--main-color);
+    font-size: 1.2rem;
+    width: 100%;
+    border: 3px solid transparent;
+    border-radius: 0;
+
+}
+
+.bl-btn:hover{
+    color: #fff;
+}
+
+/* blog details */
+
+
+
+.blog-details{
+    padding: 60px 0;
+}
+
+.blog-details .blog-single{
+    padding: 7px;
+}
+
+.blog-details .blog-single .b-title{
+    padding: 10px;
+   font-weight: bolder;
+   font-size: 2.5rem;
+   color: #111;
+}
+
+.blog-details .blog-single .date{
+    padding: 7px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.blog-details .blog-single .words{
+    padding: 2px;
+}
+
+.blog-details .blog-single .words p{
+    font-size: 1.5rem;
+    color: #111;
+
+}
+
+.blog-details .blog-single a{
+    color: #111;
+    margin-bottom: 4px solid #111;
+    font-size: 1.1rem;
+    text-decoration: none;
+
+}
+
+.blog-details .blog-single .b-img{
+    width: 70%;
+
+}
+
+.blog-details .comments{
+    padding: 15px;
+}
+
+.blog-details form label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.blog-details form .cb-btn{
+    padding: 20px;
+    color: #fff;
+    background: var(--main-color);
+    border: 3px solid transparent;
+    border-radius: 0;
+}
+
+.blog-details .comments h3{
+    color: var(--main-color);
+}
+
+.blog-details .comments .comment-line{
+    padding: 10px;
+}
+
+.blog-details .comments .comment-line p{
+    font-size:1.2rem;
+}
+/*contact*/
+
+
+.contact{
+    padding: 60px 0;
+    background: #f2f2f2;
+}
+
+.c-icon{
+    padding: 10px;
+}
+
+.c-icon .fa{
+    font-size: 2rem;
+    margin-top: 25px;
+    padding: 40px;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: #fff;
+}
+
+.c-icon h3{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.c-icon span{
+    color: #111;
+    font-size: 1.2rem;
+}
+
+.contact .c-btn{
+    color: #fff;
+}
+
+.contact .c-btn:hover{
+    color: #fff;
+    background:#111;
+}
+
+/*footer*/
+
+.footer{
+    padding: 60px 0;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+
+.book{
+    padding: 60px 0;
+}
+
+
+.book .book-single img{
+    width:100%;
+    height:400px;
+}
+
+.book p{
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.book .book-single .btn{
+    margin-top:10px;
+    padding: 10px;
+    border:4px solid transparent;
+    border-radius: 0;
+    background: var(--main-color);
+    width: 100%;
+    color: #fff;
+}
+
+
+/*contact page*/
+
+.contact form .form-group{
+    padding: 24px;
+}
+
+
+.contact form .form-control{
+    border: 1px solid #111;
+    background: transparent;
+    border-radius: 0;
+
+}
+
+.contact form label{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/*author*/
+
+
+.about-author{
+    padding: 60px 0;
+}
+
+
+/*blog-page*/
+
+.blog-page{
+    padding: 60px 0;
+}
+
+/*login btn*/
+
+
+.login{
+    padding: 60px 0;
+}
+
+.login form .form-group{
+    padding: 10px;
+}
+
+.login form label{
+    font-size: 1.1rem;
+    color: #111;
+    font-weight: bold;
+}
+
+.login form .form-control{
+    border-radius: 0;
+    background: transparent;
+}
+
+.login .l-btn{
+    padding: 20px;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 0;
+    border: 3px solid transparent;
+}
+
+.login .l-btn:hover{
+background:#111 ;
+color: #fff;
+}
+
+
+
+
+.blog .pagination{
+    padding:10px;
+}
+
+.blog .pagination .step-links .fa{
+    font-size:1.4rem;
+
+}
+
+/**users**/
+
+.main-content main .users{
+    padding: 60px 0;
+}
+
+
+
+/** academics **/
+
+
+.tutorial{
+    padding:60px 0;
+}
+
+</style>
